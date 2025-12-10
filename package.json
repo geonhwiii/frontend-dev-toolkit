@@ -1,0 +1,58 @@
+{
+  "name": "frontend-dev-toolkit",
+  "version": "0.1.0",
+  "description": "프론트엔드 개발을 위한 종합 툴킷: FSD 아키텍처, React Query 패턴, 코드 퀄리티 검사를 자동화하는 Claude Code 플러그인",
+  "type": "module",
+  "keywords": [
+    "claude-code",
+    "claude-plugin",
+    "fsd",
+    "feature-sliced-design",
+    "react-query",
+    "tanstack-query",
+    "code-quality",
+    "architecture",
+    "react",
+    "typescript",
+    "frontend"
+  ],
+  "author": {
+    "name": "Dan",
+    "email": "geonhwiii@github.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geonhwiii/frontend-dev-toolkit"
+  },
+  "bugs": {
+    "url": "https://github.com/geonhwiii/frontend-dev-toolkit/issues"
+  },
+  "homepage": "https://github.com/geonhwiii/frontend-dev-toolkit#readme",
+  "engines": {
+    "bun": ">=1.0.0",
+    "claude-code": ">=1.0.0"
+  },
+  "files": [
+    ".claude-plugin/",
+    "commands/",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "validate": "bun run validate:json",
+    "validate:json": "bun run check:plugin && bun run check:marketplace",
+    "check:plugin": "node -e \"require('./.claude-plugin/plugin.json')\"",
+    "check:marketplace": "node -e \"require('./.claude-plugin/marketplace.json')\"",
+    "version": "bun run update-version",
+    "update-version": "node -e \"const pkg = require('./package.json'); const plugin = require('./.claude-plugin/plugin.json'); const marketplace = require('./.claude-plugin/marketplace.json'); plugin.version = pkg.version; marketplace.plugins[0].version = pkg.version; require('fs').writeFileSync('./.claude-plugin/plugin.json', JSON.stringify(plugin, null, 2)); require('fs').writeFileSync('./.claude-plugin/marketplace.json', JSON.stringify(marketplace, null, 2));\""
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": ">=5.0.0",
+    "react": ">=18.0.0",
+    "zod": ">=3.0.0"
+  },
+  "devDependencies": {}
+}
