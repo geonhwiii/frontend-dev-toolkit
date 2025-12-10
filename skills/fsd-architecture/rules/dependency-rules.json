@@ -1,0 +1,107 @@
+{
+  "version": "1.0.0",
+  "description": "FSD layer dependency rules and validation configuration",
+  "layers": {
+    "app": {
+      "level": 6,
+      "canImportFrom": ["pages", "widgets", "features", "entities", "shared"],
+      "description": "Application entry point, routing, global providers",
+      "segments": ["providers", "styles", "routes"],
+      "examples": ["App.tsx", "Router.tsx", "ThemeProvider.tsx"]
+    },
+    "pages": {
+      "level": 5,
+      "canImportFrom": ["widgets", "features", "entities", "shared"],
+      "description": "Full pages or nested routes",
+      "segments": ["ui", "model", "lib"],
+      "examples": ["HomePage", "UserProfilePage", "DashboardPage"]
+    },
+    "widgets": {
+      "level": 4,
+      "canImportFrom": ["features", "entities", "shared"],
+      "description": "Large independent UI/feature blocks",
+      "segments": ["ui", "model", "lib", "config"],
+      "examples": ["Header", "Sidebar", "ProductCarousel"]
+    },
+    "features": {
+      "level": 3,
+      "canImportFrom": ["entities", "shared"],
+      "description": "Reusable business functionality",
+      "segments": ["ui", "api", "model", "lib"],
+      "examples": ["auth", "edit-user", "add-to-cart"]
+    },
+    "entities": {
+      "level": 2,
+      "canImportFrom": ["shared"],
+      "description": "Core domain elements",
+      "segments": ["ui", "api", "model", "lib"],
+      "examples": ["user", "product", "order", "comment"]
+    },
+    "shared": {
+      "level": 1,
+      "canImportFrom": [],
+      "description": "General utilities and components",
+      "segments": ["ui", "api", "lib", "config", "types"],
+      "examples": ["Button", "apiClient", "formatDate", "constants"]
+    }
+  },
+  "segments": {
+    "ui": {
+      "description": "UI components (React components)",
+      "filePatterns": ["*.tsx", "*Component.tsx", "*View.tsx"],
+      "examples": ["UserCard.tsx", "LoginForm.tsx"]
+    },
+    "api": {
+      "description": "API functions, React Query setup",
+      "filePatterns": ["*.queries.ts", "*.keys.ts", "*.api.ts", "use*.ts"],
+      "examples": ["user.queries.ts", "user.keys.ts", "useUpdateUser.ts"]
+    },
+    "model": {
+      "description": "Types, interfaces, business logic",
+      "filePatterns": ["types.ts", "*.model.ts", "schema.ts"],
+      "examples": ["types.ts", "user.model.ts"]
+    },
+    "lib": {
+      "description": "Utilities specific to this slice/layer",
+      "filePatterns": ["*.utils.ts", "*.helpers.ts"],
+      "examples": ["formatUser.ts", "validateEmail.ts"]
+    },
+    "config": {
+      "description": "Configuration files",
+      "filePatterns": ["config.ts", "constants.ts"],
+      "examples": ["config.ts", "api-endpoints.ts"]
+    }
+  },
+  "rules": {
+    "publicApiRequired": true,
+    "publicApiFiles": ["index.ts", "index.tsx"],
+    "allowCrossSliceImports": false,
+    "strictLayerDependencies": true,
+    "enforceSegmentOrganization": true
+  },
+  "validation": {
+    "checkImports": true,
+    "checkPublicApi": true,
+    "checkCircularDependencies": true,
+    "checkLayerViolations": true,
+    "checkCrossSliceImports": true
+  },
+  "pathAliases": {
+    "@/app": "src/app",
+    "@/pages": "src/pages",
+    "@/widgets": "src/widgets",
+    "@/features": "src/features",
+    "@/entities": "src/entities",
+    "@/shared": "src/shared"
+  },
+  "ignorePatterns": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.stories.tsx",
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**"
+  ]
+}
