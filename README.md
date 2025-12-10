@@ -62,20 +62,43 @@
 
 ## 설치 방법
 
+### 마켓플레이스에서 설치 (권장)
+
+Claude Code에서 GitHub 저장소를 통해 직접 설치:
+
+```bash
+# 마켓플레이스 추가
+/plugin marketplace add geonhwiii/frontend-dev-toolkit
+
+# 플러그인 설치
+/plugin install frontend-dev-toolkit@frontend-dev-toolkit
+```
+
+또는 저장소 URL로 직접 추가:
+
+```bash
+/plugin marketplace add https://github.com/geonhwiii/frontend-dev-toolkit.git
+/plugin install frontend-dev-toolkit@frontend-dev-toolkit
+```
+
 ### 로컬 개발용
 
 ```bash
-git clone https://github.com/dan/frontend-dev-toolkit.git
+git clone https://github.com/geonhwiii/frontend-dev-toolkit.git
 cd frontend-dev-toolkit
 
 # Claude Code에서 로컬 플러그인 추가
 /plugin install ./frontend-dev-toolkit
 ```
 
-### 마켓플레이스에서 설치 (향후)
+### 업데이트
 
 ```bash
-/plugin install frontend-dev-toolkit
+# 마켓플레이스 업데이트
+/plugin marketplace update frontend-dev-toolkit
+
+# 플러그인 재설치
+/plugin install frontend-dev-toolkit@frontend-dev-toolkit
 ```
 
 ## 빠른 시작

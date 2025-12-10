@@ -5,12 +5,12 @@
   "description": "프론트엔드 개발을 위한 종합 툴킷: FSD 아키텍처, React Query 패턴, 코드 퀄리티 검사를 자동화하는 Claude Code 플러그인",
   "author": {
     "name": "Dan",
-    "email": ""
+    "email": "geonhwiii@github.com"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dan/frontend-dev-toolkit"
+    "url": "https://github.com/geonhwiii/frontend-dev-toolkit"
   },
   "keywords": [
     "fsd",

@@ -1,0 +1,45 @@
+{
+  "name": "frontend-dev-toolkit",
+  "owner": {
+    "name": "Dan",
+    "email": "geonhwiii@github.com"
+  },
+  "metadata": {
+    "description": "프론트엔드 개발을 위한 종합 툴킷 마켓플레이스",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "frontend-dev-toolkit",
+      "source": "./",
+      "description": "프론트엔드 개발을 위한 종합 툴킷: FSD 아키텍처, React Query 패턴, 코드 퀄리티 검사를 자동화하는 Claude Code 플러그인",
+      "version": "0.1.0",
+      "author": {
+        "name": "Dan",
+        "email": "geonhwiii@github.com"
+      },
+      "homepage": "https://github.com/geonhwiii/frontend-dev-toolkit",
+      "repository": "https://github.com/geonhwiii/frontend-dev-toolkit",
+      "license": "MIT",
+      "keywords": [
+        "fsd",
+        "feature-sliced-design",
+        "react-query",
+        "tanstack-query",
+        "code-quality",
+        "architecture",
+        "react",
+        "typescript",
+        "frontend"
+      ],
+      "category": "Development Tools",
+      "tags": [
+        "architecture",
+        "react",
+        "typescript",
+        "code-quality",
+        "automation"
+      ]
+    }
+  ]
+}
