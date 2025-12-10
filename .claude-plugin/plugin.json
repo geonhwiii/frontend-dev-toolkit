@@ -1,0 +1,158 @@
+{
+  "name": "frontend-dev-toolkit",
+  "version": "0.1.0",
+  "displayName": "Frontend Dev Toolkit",
+  "description": "프론트엔드 개발을 위한 종합 툴킷: FSD 아키텍처, React Query 패턴, 코드 퀄리티 검사를 자동화하는 Claude Code 플러그인",
+  "author": {
+    "name": "Dan",
+    "email": ""
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dan/frontend-dev-toolkit"
+  },
+  "keywords": [
+    "fsd",
+    "feature-sliced-design",
+    "react-query",
+    "tanstack-query",
+    "code-quality",
+    "architecture",
+    "react",
+    "typescript",
+    "frontend"
+  ],
+  "skills": [
+    {
+      "name": "fsd-architecture",
+      "path": "skills/fsd-architecture/SKILL.md",
+      "enabled": true,
+      "priority": "high",
+      "tags": ["architecture", "fsd", "structure"]
+    },
+    {
+      "name": "react-query-patterns",
+      "path": "skills/react-query-patterns/SKILL.md",
+      "enabled": true,
+      "priority": "high",
+      "tags": ["react-query", "data-fetching", "api"]
+    },
+    {
+      "name": "code-quality",
+      "path": "skills/code-quality/SKILL.md",
+      "enabled": true,
+      "priority": "medium",
+      "tags": ["code-quality", "refactoring", "solid"]
+    },
+    {
+      "name": "zod-validation",
+      "path": "skills/zod-validation/SKILL.md",
+      "enabled": true,
+      "priority": "medium",
+      "tags": ["validation", "zod", "schema"]
+    }
+  ],
+  "commands": [
+    {
+      "name": "fsd-init",
+      "path": "commands/fsd-init.md",
+      "description": "Initialize Feature-Sliced Design architecture structure",
+      "usage": "/fsd-init",
+      "category": "architecture"
+    },
+    {
+      "name": "fsd-slice",
+      "path": "commands/fsd-slice.md",
+      "description": "Create a new FSD slice (entity, feature, or widget)",
+      "usage": "/fsd-slice",
+      "category": "architecture"
+    },
+    {
+      "name": "fsd-validate",
+      "path": "commands/fsd-validate.md",
+      "description": "Validate FSD structure and dependency rules",
+      "usage": "/fsd-validate",
+      "category": "architecture"
+    },
+    {
+      "name": "rq-setup",
+      "path": "commands/rq-setup.md",
+      "description": "Setup React Query in the project",
+      "usage": "/rq-setup",
+      "category": "react-query"
+    },
+    {
+      "name": "rq-entity",
+      "path": "commands/rq-entity.md",
+      "description": "Generate React Query setup for an entity",
+      "usage": "/rq-entity",
+      "category": "react-query"
+    },
+    {
+      "name": "quality-check",
+      "path": "commands/quality-check.md",
+      "description": "Perform code quality analysis on files or directories",
+      "usage": "/quality-check",
+      "category": "code-quality"
+    },
+    {
+      "name": "validate-schema",
+      "path": "commands/validate-schema.md",
+      "description": "Validate and analyze Zod schemas",
+      "usage": "/validate-schema",
+      "category": "validation"
+    }
+  ],
+  "configuration": {
+    "fsd": {
+      "strictMode": true,
+      "allowedLayers": ["app", "pages", "widgets", "features", "entities", "shared"],
+      "enforcePublicApi": true,
+      "checkDependencies": true
+    },
+    "reactQuery": {
+      "preferSuspense": true,
+      "enforceQueryKeyFactory": true,
+      "enforceQueryOptions": true,
+      "includeDevtools": true
+    },
+    "quality": {
+      "strictTypeChecking": true,
+      "maxCyclomaticComplexity": 10,
+      "minCohesion": 0.7,
+      "maxComponentLines": 250,
+      "checkSolidPrinciples": true
+    },
+    "validation": {
+      "enforceZodSchemas": false,
+      "validateApiResponses": true,
+      "validateFormInputs": true
+    }
+  },
+  "dependencies": {
+    "recommended": [
+      "@tanstack/react-query",
+      "@tanstack/react-query-devtools",
+      "ky",
+      "zod",
+      "react-hook-form",
+      "@hookform/resolvers"
+    ],
+    "optional": [
+      "react-error-boundary",
+      "react-hot-toast"
+    ]
+  },
+  "templates": {
+    "entity-slice": "skills/fsd-architecture/templates/entity-slice.template.ts",
+    "feature-slice": "skills/fsd-architecture/templates/feature-slice.template.ts",
+    "widget-slice": "skills/fsd-architecture/templates/widget-slice.template.ts"
+  },
+  "rules": {
+    "dependency-rules": "skills/fsd-architecture/rules/dependency-rules.json"
+  },
+  "engines": {
+    "claude-code": ">=1.0.0"
+  }
+}
