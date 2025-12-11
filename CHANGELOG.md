@@ -13,6 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 테스트 커버리지 추가
 - 영문 문서화
 
+## [0.1.1] - 2025-12-11
+
+### Changed
+- **마켓플레이스 설정 업데이트**
+  - 마켓플레이스 이름을 `frontend-dev-toolkit`에서 `dan`으로 변경
+  - 설치 명령어 간소화: `/plugin install frontend-dev-toolkit@dan`
+  - marketplace.json 구조 최적화 (Claude Code 공식 문서 기준 준수)
+
+### Fixed
+- README.md의 설치 및 업데이트 명령어 수정
+- 마켓플레이스 참조 일관성 개선
+
 ## [0.1.0] - 2025-12-11
 
 ### Added
