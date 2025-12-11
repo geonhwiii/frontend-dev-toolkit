@@ -71,14 +71,14 @@ Claude Code에서 GitHub 저장소를 통해 직접 설치:
 /plugin marketplace add geonhwiii/frontend-dev-toolkit
 
 # 플러그인 설치
-/plugin install frontend-dev-toolkit@frontend-dev-toolkit
+/plugin install frontend-dev-toolkit@dan
 ```
 
 또는 저장소 URL로 직접 추가:
 
 ```bash
 /plugin marketplace add https://github.com/geonhwiii/frontend-dev-toolkit.git
-/plugin install frontend-dev-toolkit@frontend-dev-toolkit
+/plugin install frontend-dev-toolkit@dan
 ```
 
 ### 로컬 개발용
@@ -95,10 +95,10 @@ cd frontend-dev-toolkit
 
 ```bash
 # 마켓플레이스 업데이트
-/plugin marketplace update frontend-dev-toolkit
+/plugin marketplace update dan
 
 # 플러그인 재설치
-/plugin install frontend-dev-toolkit@frontend-dev-toolkit
+/plugin install frontend-dev-toolkit@dan
 ```
 
 ## 빠른 시작
