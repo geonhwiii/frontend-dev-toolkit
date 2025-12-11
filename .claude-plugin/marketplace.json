@@ -1,7 +1,8 @@
 {
-  "name": "frontend-dev-toolkit",
+  "name": "dan-toolkit",
   "owner": {
-    "name": "Dan"
+    "name": "Dan",
+    "email": "gunw.dan@gmail.com"
   },
   "plugins": [
     {
