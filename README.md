@@ -23,6 +23,12 @@
 - **TypeScript 검사**: any 사용, 타입 단언 남용 탐지
 - **리팩토링 제안**: 코드 스멜 식별 및 개선 방안 제시
 
+### 🔍 Code Smell Detection (NEW)
+- **Frontend Fundamentals 기반**: Toss 프론트엔드 코드 품질 가이드 적용
+- **4대 원칙 검사**: 가독성, 예측 가능성, 응집도, 결합도
+- **Before/After 예시**: 구체적인 개선 코드 제공
+- **우선순위 제안**: 심각도에 따른 개선 순서 제시
+
 ### 🛡️ Zod Validation
 - **API 스키마**: DTO를 도메인 모델로 변환하는 스키마 자동 생성
 - **폼 검증**: React Hook Form + Zod 통합 패턴
@@ -57,6 +63,7 @@
 /rq-setup              # React Query 설정
 /rq-entity             # Entity용 Query 생성
 /quality-check         # 코드 퀄리티 검사
+/code-smell            # 코드 스멜 탐지 (Frontend Fundamentals 기반)
 /validate-schema       # Zod 스키마 검증
 ```
 
@@ -369,16 +376,17 @@ const name = user.name.toUpperCase();  // user.name is already string
 - 기본 슬라이스 템플릿
 - 슬래시 커맨드
 
-### 🚧 Phase 2 (진행 중)
+### ✅ Phase 2 (완료)
 - React Query 패턴 스킬
 - FSD + React Query 통합
 
-### 📋 Phase 3 (예정)
+### ✅ Phase 3 (완료)
 - 코드 퀄리티 스킬
 - SOLID 원칙 검사
 - 응집도/결합도 분석
+- Code Smell Detection (Frontend Fundamentals 기반)
 
-### 📋 Phase 4 (예정)
+### 🚧 Phase 4 (진행 중)
 - Zod Validation 스킬
 - API/Form 스키마 생성
 
@@ -394,4 +402,5 @@ MIT License
 
 - [Feature-Sliced Design 공식 문서](https://feature-sliced.design)
 - [React Query 공식 문서](https://tanstack.com/query)
+- [Frontend Fundamentals - 코드 품질](https://frontend-fundamentals.com/code-quality/code/)
 - [Claude Code 플러그인 가이드](https://code.claude.com/docs/plugins)

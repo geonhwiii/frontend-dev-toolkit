@@ -8,10 +8,49 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned
-- Code Quality 스킬 완성 (SOLID 원칙 검사)
 - Zod Validation 스킬 완성
 - 테스트 커버리지 추가
 - 영문 문서화
+
+## [0.2.0] - 2025-12-17
+
+### Added
+- **Code Smell Detection 스킬**
+  - Toss Frontend Fundamentals 기반 코드 스멜 탐지
+  - 4대 원칙 검사: 가독성, 예측 가능성, 응집도, 결합도
+  - `/code-smell`: 코드 스멜 탐지 및 리팩토링 제안 커맨드
+  - Before/After 코드 예시 제공
+  - 우선순위 기반 개선 가이드
+
+- **가독성 (Readability) 코드 스멜 탐지**
+  - 같이 실행되지 않는 코드 혼재
+  - 구현 상세 노출 (6-7개 이상 맥락)
+  - 복잡한 조건식 (이름 없음)
+  - 중첩된 삼항 연산자
+  - 매직 넘버 사용
+
+- **예측 가능성 (Predictability) 코드 스멜 탐지**
+  - 같은 이름, 다른 동작
+  - 반환 타입 불일치
+  - 숨은 사이드 이펙트
+
+- **응집도 (Cohesion) 코드 스멜 탐지**
+  - 파일이 종류별로만 분류됨
+  - 매직 넘버 분산
+  - 폼 응집도 불일치
+
+- **결합도 (Coupling) 코드 스멜 탐지**
+  - 한 Hook이 여러 책임 담당
+  - 불필요한 공통화
+  - Props Drilling (3단계 이상)
+
+### Changed
+- README.md 업데이트: Code Smell Detection 기능 추가
+- 개발 로드맵 업데이트: Phase 3 완료
+
+### Documentation
+- Frontend Fundamentals 참고 자료 링크 추가
+- 코드 스멜 체크리스트 문서화
 
 ## [0.1.1] - 2025-12-11
 
@@ -77,4 +116,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History
 
+- **0.2.0** (2025-12-17): Code Smell Detection - Frontend Fundamentals 기반
+- **0.1.1** (2025-12-11): Marketplace configuration update
 - **0.1.0** (2025-12-11): Initial release - FSD Architecture + React Query Patterns

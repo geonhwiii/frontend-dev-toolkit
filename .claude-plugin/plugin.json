@@ -1,6 +1,6 @@
 {
   "name": "frontend-dev-toolkit",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "프론트엔드 개발을 위한 종합 툴킷: FSD 아키텍처, React Query 패턴, 코드 퀄리티 검사를 자동화하는 Claude Code 플러그인",
   "author": {
     "name": "Dan",
@@ -15,6 +15,8 @@
     "react-query",
     "tanstack-query",
     "code-quality",
+    "code-smell",
+    "frontend-fundamentals",
     "architecture",
     "react",
     "typescript",
